@@ -10,7 +10,7 @@ let s=(a+b+c)*0.5
 let s_Area=Math.sqrt(s*(s-a)*(s-b)*(s-c))
 alert("Ttiand area is "+ s_Area.toFixed(3))
 }
- eles {
+ else {
   alert("unexpected result")
 }
  if((a*a+b*b===c*c)||(b*b+c*c===a*a)||(c*c+a*a===b*b)){
