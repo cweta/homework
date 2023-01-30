@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <html>
+        <script>
+            let inputString="i love java script";
+
+function capitalize(inputString) {
+    return inputString.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
+    
+}
+
+document.writeln(capitalize(inputString));
+
+        </script>
+    </html>
+</head>
