@@ -1,18 +1,17 @@
 function checkAge(age) {
-  if (typeof age !== "number") {
-    throw new Error("Age is not a Number");
-  }
   if (age >= 14) {
     return true;
   } else {
-    return confirm("You are too young");
+    return false;
   }
 }
 
-let age = prompt("How old are you", 14);
+let age = +prompt("How old are you");
 
 try {
-  if (checkAge(age)) {
+  if (isNaN(age)) {
+    alert("Age is not a Number");
+  } else if (checkAge(age)) {
     alert("Access granted");
   } else {
     alert("Access closed");
