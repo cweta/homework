@@ -15,3 +15,4 @@ function showProps(obj, objName) {
     }
     return result;
   }
+  alert (showProps (myCar, "myCar") )

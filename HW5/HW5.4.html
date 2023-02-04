@@ -1,0 +1,80 @@
+<script>
+  class Worker {
+    constructor(fullName, dayRate, workingDays) {
+      this.fullName = fullName;
+      this.dayRate = dayRate;
+      this.workingDays = workingDays;
+    }
+    #experience = 1.2;
+    get exp() {
+      return this.#experience;
+    }
+    set exp(value) {
+      this.#experience = value;
+    }
+    showSalary() {
+      return this.dayRate * this.workingDays;
+    }
+    showSalaryWithExperience() {
+      return this.showSalary() * this.exp;
+    }
+  }
+  let workers = [];
+
+  let worker1 = new Worker("John Johnson", 20, 23);
+  console.log(worker1.fullName);
+  console.log(worker1.fullName + " salary: " + worker1.showSalary());
+  console.log("New experience: " + worker1.exp);
+  console.log(
+    worker1.fullName + " salary: " + worker1.showSalaryWithExperience()
+  );
+  worker1.exp = 1.5;
+  workers.push({
+    obj: worker1,
+    salary: worker1.showSalaryWithExperience(),
+  });
+  console.log("New experience: " + worker1.exp);
+  console.log(
+    worker1.fullName + " salary: " + worker1.showSalaryWithExperience()
+  );
+  console.log("...........................................");
+  let worker2 = new Worker("Tom Tomson", 48, 22);
+  console.log(worker2.fullName);
+  console.log(worker2.fullName + " salary: " + worker2.showSalary());
+  console.log("New experience: " + worker2.exp);
+  console.log(
+    worker2.fullName + " salary: " + worker2.showSalaryWithExperience()
+  );
+  worker2.exp = 1.5;
+  workers.push({
+    obj: worker2,
+    salary: worker2.showSalaryWithExperience(),
+  });
+  console.log("New experience: " + worker2.exp);
+  console.log(
+    worker2.fullName + " salary: " + worker2.showSalaryWithExperience()
+  );
+  console.log("...........................................");
+  let worker3 = new Worker("Andy Ander", 29, 23);
+  console.log(worker3.fullName);
+  console.log(worker3.fullName + " salary: " + worker3.showSalary());
+  console.log("New experience: " + worker3.exp);
+  console.log(
+    worker3.fullName + " salary: " + worker3.showSalaryWithExperience()
+  );
+  worker3.exp = 1.5;
+  workers.push({
+    obj: worker3,
+    salary: worker3.showSalaryWithExperience(),
+  });
+  console.log("New experience: " + worker3.exp);
+  console.log(
+    worker3.fullName + " salary: " + worker3.showSalaryWithExperience()
+  );
+  console.log("...........................................");
+  workers.sort((a, b) => a.salary - b.salary);
+  console.log("Sorted salary:");
+  workers.forEach((el) => {
+    console.log(el.obj.fullName + " : " + el.obj.showSalaryWithExperience());
+  });
+</script>
