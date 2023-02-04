@@ -31,8 +31,8 @@ class Person {
     }
   }
 
-  let person = new Person("sveta", "svetlanko");
+  let person = new Person("Petro", "Petrenko");
   console.log(person.showFullName());
-  let student = new Student("sveta", "svetlanko", 2022);
-  console.log(student.showFullName("svetlankovna"));
+  let student = new Student("Petro", "Petrenko", 2022);
+  console.log(student.showFullName("Petrovych"));
   console.log("Current course: " + student.showCourse()); 
