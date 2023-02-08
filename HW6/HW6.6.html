@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <input type="text" id="input1" value="Text1" />
+    <input type="text" id="input2" value="Text2" />
+    <script>
+      let elements = document.querySelectorAll("input");
+
+      elements[0].defaultValue = prompt("first text");
+      elements[1].defaultValue = prompt("second text");
+      setTimeout(() => {
+        let temporary = elements[0].defaultValue;
+        elements[0].defaultValue = elements[1].defaultValue;
+        elements[1].defaultValue = temporary;
+      }, 2000);
+    </script>
+  </body>
+</html>

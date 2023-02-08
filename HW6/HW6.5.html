@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+      <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+      <li>Make</li>
+      <li>me</li>
+      <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <script>
+      document.querySelector("h1").style.backgroundColor = "green";
+      let elements = document.querySelectorAll("div>p");
+      elements[1].style.color = "red";
+      elements[0].style.fontWeight = "bold";
+      elements[2].style.textDecorationLine = "underline";
+      elements[3].style.fontStyle = "italic";
+      document.querySelector("span").style.display = "none";
+      document.querySelector("ul").style.display = "none";
+      let liElements = document.querySelectorAll("ul>li");
+      let arr = [];
+      liElements.forEach((elem) => {
+        arr.push(elem.innerHTML);
+      });
+      let last = document.createElement("p");
+      last.innerHTML = arr.join(" ");
+
+      document.body.appendChild(last);
+    </script>
+  </body>
+</html>

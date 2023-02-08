@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      let main = document.createElement("main");
+      document.body.appendChild(main);
+      let div = document.createElement("div");
+      main.appendChild(div);
+      let p = document.createElement("p");
+      div.appendChild(p);
+      p.innerHTML = "First paragraph";
+      div.id = "myDiv";
+      main.classList = "mainClass check item";
+    </script>
+  </body>
+</html>

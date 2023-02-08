@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <script>
+      let arrNum = document.querySelectorAll("ul>li");
+      alert("first : " + arrNum[0].innerHTML);
+      alert("last : " + arrNum[arrNum.length - 1].innerHTML);
+      alert("second : " + arrNum[1].innerHTML);
+      alert("fourth : " + arrNum[4].innerHTML);
+      alert("third : " + arrNum[3].innerHTML);
+    </script>
+  </body>
+</html>
