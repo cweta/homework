@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" id="test" value="Live button" onmousedown="viewDiv()">
+    <div id="div1">I was pressed!</div>
+    <div id="div2">Mouse on me!</div>
+    <div id="div3">Mouse is not on me! </div>
+
+<script>
+    let elem1=document.getElementById("div1")
+    let elem2=document.getElementById("div2")
+    let elem3=document.getElementById("div3")
+    function viewDiv(){
+    elem1.style.display = "block";
+};
+    elem1.style.display = "none";
+
+
+
+
+    document.getElementById('test').addEventListener("mouseover", mouseover)
+    document.getElementById('test').addEventListener("mouseout", mouseout)
+    function mouseover(){
+        elem2.style.display="block"
+    }
+        elem2.style.display="none"
+
+
+    function mouseout(){
+        elem3.style.display="block"
+    }
+        elem3.style.display="none"
+</script>
+</body>
+</html>

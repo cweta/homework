@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+    <p id ='text'>I learning JavaScript events!</p> 
+    <div>
+        <button onclick="changeCSS()" >Change style!</button>
+    </div>
+    
+<script>
+    function changeCSS(){
+        let elem=document.querySelector('#text')
+        elem.style.color='#C05805'
+        elem.style.fontSize='20px'
+        elem.style.fontFamily='Comic Sans MS'
+     }
+
+</script>
+</body>
+</html>

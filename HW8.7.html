@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input id="num" placeholder="Bведіть login" />
+      <button id="btn">Відправити</button>
+    </div>
+    <script>
+      // let reg1 = / /;
+      let reg2 = /^[A-Za-z][A-Za-z0-9]{1,9}$/;
+      let inp = document.querySelector("#num");
+      document.querySelector("#btn").onclick = function (e) {
+        e.preventDefault();
+        if (reg2.test(inp.value)) {
+          alert("true");
+        } else {
+          alert("false");
+        }
+      };
+    </script>
+  </body>
+</html>

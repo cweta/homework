@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+                        
+    <select name="cities" id="cities">
+        <option id="c1" ></option>
+        <option id="c2"></option>
+        <option id="c3"></option>
+    </select>
+    <p></p>
+    <script>
+        let gerCities=["Berlin", "Bremen", "Hamburg"]
+        let usaCities=["Chicago", "Houston", "Phoenix"]
+        let ukrCities=["Kyiv", "Dnipro", "Lviv"]
+        let select=document.querySelector("#country")
+        let select2=document.querySelector("#cities")
+        let current=select.value
+        let text= document.querySelector("p")
+        select.addEventListener("change", () => {
+        current = select.value;
+        switch(current){
+            case "ger": 
+            select2.options[0].innerHTML = gerCities[0]
+            select2.options[1].innerHTML = gerCities[1]
+            select2.options[2].innerHTML = gerCities[2]
+            break;
+            case "usa":
+            select2.options[0].innerHTML = usaCities[0]
+            select2.options[1].innerHTML = usaCities[1]
+            select2.options[2].innerHTML = usaCities[2] 
+            break;
+            case "ukr": 
+            select2.options[0].innerHTML = ukrCities[0]
+            select2.options[1].innerHTML = ukrCities[1]
+            select2.options[2].innerHTML = ukrCities[2]
+            break;
+        }
+    })
+    select2.addEventListener("change", () =>{
+        text.innerHTML=`${current}, ${select2.value}`
+    })
+    </script>
+    
+</body>
+</html>

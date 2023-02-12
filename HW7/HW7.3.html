@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+    <div>
+        <button onclick="blue()" >Click to make the page blue.</button>
+        <button ondblclick="pink()"> Double-click to make the page pink.</button>
+        <button id="test"> Click and hold to make the page brown.</button>
+        <a href="#" id="test2">Hover over to make page yellow</a>
+    </div>
+    
+<script>
+    let elem=document.body
+    let button=document.querySelector('#test')
+    let button2=document.querySelector('#test2')
+    function blue(){
+       elem.style.background='#66A5AD'
+   }
+   function pink(){
+    elem.style.background='pink'
+   }
+   
+    document.getElementById('test').addEventListener("mousedown", mousedown)
+    document.getElementById('test').addEventListener("mouseup", mouseup)
+    function mousedown(){
+    elem.style.background="#662E1C"
+    }
+    function mouseup() {
+    elem.style.background = "white";
+    }
+
+    document.getElementById('test2').addEventListener("mouseover", mouseover)
+    document.getElementById('test2').addEventListener("mouseout", mouseout)
+    function mouseover(){
+        elem.style.background= "#E8A735";
+    }
+    function mouseout(){
+        elem.style.background="white"
+    }
+
+
+</script>
+</body>
+</html>

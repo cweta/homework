@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+        <select id="people">
+            <option id="Tom">Tom</option>
+            <option id="Nick">Nick</option>
+            <option id="Alex">Alex</option>
+            <option id="Sara">Sara</option>
+            <option id="Max">Max</option>
+          </select>
+    <button onclick="deleteFunction()">Delete person!</button>
+    <script> 
+        let select = document.querySelector("#people");
+        let current = select.value;
+        select.addEventListener("change", () => {
+        current = select.value;
+        });
+        function deleteFunction(){
+            try {
+                let option=document.querySelector(`#${current}`)
+                option.remove()
+                current=select.value
+                } catch (error) {
+                    console.log("Everything has been deleted")
+         }
+
+        }
+    
+    </script>
+</body>
+</html>
