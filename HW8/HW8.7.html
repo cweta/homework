@@ -8,21 +8,24 @@
   </head>
   <body>
     <div>
-      <input id="num" placeholder="Bведіть login" />
+      <input id="num" placeholder="Bведiть login" />
       <button id="btn">Відправити</button>
+      <p id="log"></p>
     </div>
+
     <script>
-      // let reg1 = / /;
-      let reg2 = /^[A-Za-z][A-Za-z0-9]{1,9}$/;
+     let elem = document.getElementById("log");
+      let reg2 = /^[A-Za-z][A-Za-z0-9 ,]{1,9}$/;
       let inp = document.querySelector("#num");
       document.querySelector("#btn").onclick = function (e) {
         e.preventDefault();
         if (reg2.test(inp.value)) {
-          alert("true");
+            elem.innerHTML = true                 
         } else {
-          alert("false");
+            elem.innerHTML = false
         }
       };
+   
     </script>
   </body>
 </html>
