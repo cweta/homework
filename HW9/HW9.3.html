@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+</script>
+</head>
+
+<body>
+    <h3>header1</h3>
+    <div>text1</div>
+    <h3>header2</h3>
+    <div>text2</div>
+<script>
+    let divs = document.getElementsByTagName("div");
+      console.log(divs);
+      let headers = document.getElementsByTagName("h3");
+      console.log(headers);
+      headers[0].classList.add("col1");
+      headers[1].classList.add("col3");
+      divs[0].classList.add("col2");
+      divs[1].classList.add("col4");
+
+</script>
+<style type="text/css">
+    body {
+  display: flex;
+  flex-direction: column;
+}
+
+.col1,
+.col2,
+.col3,
+.col4 {
+  display: flex;
+}
+
+.col1 {
+  order: 1;
+}
+.col2 {
+  order: 0;
+}
+.col3 {
+  order: 3;
+}
+.col4 {
+  order: 2;
+}
+</style>
+</body>
+</html>

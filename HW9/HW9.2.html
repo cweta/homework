@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+    <h2 class="head">header1</h2>
+    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+    <h2>header3</h2>
+    <h2 class="head">header4<span>inner elem2</span></h2>
+    <h2>header5</h2>
+
+
+    <script>
+        $("h2.head").css("background", "green")
+        $("span.inner").css("fontSize", "35px")
+
+     </script>
+</body>
+</html>
