@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn btn-list" data-toggle="collapse" data-target="#hide-me"> Vote! </button>
+    <script>
+        let plus = 2; 
+    let  xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://worldtimeapi.org/api/timezone/Europe/London', false); 
+    xhr.send(); 
+    if (xhr.status != 200) {
+        console.log( xhr.status + ': ' + xhr.statusText ); 
+    } else {
+        let time = xhr.responseText; 
+        let z = JSON.parse(time).utc_datetime; 
+        let time1 = new Date(z).getTime(); 
+        let timestampPlus = time1 + (plus * 60 * 60 * 1000); 
+        let timePlus = new Date(timestampPlus);
+        let result = timePlus.toUTCString(); 
+
+        $('.btn-list').on('click',function() {
+    if (!$(this).hasClass('active')) {
+        $(this).html('Your vote is accepted :  ' + result);
+    } else {
+        $(this).html('Vote!');
+    }
+    $(this).toggleClass('active');
+});
+    }
+
+    </script>
+</body>
+</html>
